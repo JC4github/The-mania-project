@@ -3,14 +3,10 @@
 }
 
 .hero {
-    width: 100;
-    height: 100vh;
-    background-image: url('../public/assets/banner.svg');
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    overflow: hidden;
+    background-color: #150111;
 }
+
+
 .hero2 {
     width: 100;
     height: 100vh;
@@ -180,4 +176,99 @@
 .svg{
     display: inline-block;
     height: 100%;
+}
+
+.section1{
+    height: 100vh;
+    background-color: #0d0d0d;
+}
+
+.mode1{
+        position: absolute;
+        right: 0;
+        top: 5%;
+        width: 30vw;
+        z-index: 2;
+        display: block;
+}
+
+.mode2 {
+    position: absolute;
+    right: 0;
+    top: 27%;
+    width: 30vw;
+    z-index: 2;
+    display: block;
+}
+
+.mode3 {
+    position: absolute;
+    right: 0;
+    top: 48%;
+    width: 30vw;
+    z-index: 2;
+    display: block;
+}
+
+.mode4 {
+    position: absolute;
+    right: 0;
+    top: 70%;
+    width: 30vw;
+    z-index: 2;
+    display: block;
+}
+
+.x1{
+    position: absolute;
+    top: 5vh;
+    left: 20vw;
+    width: 10vw;
+}
+
+.x2 {
+    position: absolute;
+    top: 5vh;
+    left: 35vw;
+    width: 10vw;
+}
+
+.x3 {
+    position: absolute;
+    top: 5vh;
+    left: 50vw;
+    width: 10vw;
+}
+
+.pill{
+    position: absolute;
+        top: 0;
+        left: 65vw;
+        width: 30vw;
+        height: auto;
+}
+
+.pill2 {
+    position: absolute;
+    top: 0;
+    left: 87vw;
+    width: 20vw;
+    height: auto;
+}
+
+.halfCircle{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.squareContainer{
+    position: absolute;
+    left: 10vw;
+    bottom: 3vh;
+}
+
+.square{
+    margin-right: 3vw;
+    width: 2vw;
 }
