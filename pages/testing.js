@@ -18,10 +18,10 @@ export default function test(){
 
             {/* the pills */}
             <ParallaxLayer speed={2}>
-                <svg className={styles.pill} width="278" height="278" viewBox="0 100 278 278" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg className={styles.pill} width="278" height="278" viewBox="0 100 278 278" fill="#150111" xmlns="http://www.w3.org/2000/svg">
                 <path d="M103.032 104.032L17.6951 189.357C13.0364 194.016 9.34091 199.547 6.81963 205.633C4.29836 211.72 3.00067 218.244 3.00067 224.832C3.00067 231.42 4.29836 237.944 6.81963 244.031C9.34091 250.117 13.0364 255.648 17.6951 260.306C22.3535 264.965 27.884 268.661 33.9706 271.182C40.0573 273.703 46.581 275.001 53.1692 275.001C59.7574 275.001 66.2811 273.703 72.3677 271.182C78.4544 268.661 83.9848 264.965 88.6433 260.306L173.968 174.969M103.032 104.032L189.775 18.0202C194.433 13.3615 199.964 9.66604 206.05 7.14477C212.137 4.6235 218.661 3.32581 225.249 3.32581C231.837 3.32581 238.361 4.6235 244.447 7.14477C250.534 9.66604 256.065 13.3615 260.723 18.0202C265.382 22.6786 269.077 28.2091 271.598 34.2958C274.12 40.3824 275.417 46.9061 275.417 53.4943C275.417 60.0825 274.12 66.6062 271.598 72.6929C269.077 78.7795 265.382 84.31 260.723 88.9684L173.968 174.969" stroke="#FE46CA" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
-                <svg className={styles.pill2} width="278" height="278" viewBox="0 100 278 278" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg className={styles.pill2} width="278" height="278" viewBox="0 100 278 278" fill="#150111" xmlns="http://www.w3.org/2000/svg">
                 <path d="M103.032 104.032L17.6951 189.357C13.0364 194.016 9.34091 199.547 6.81963 205.633C4.29836 211.72 3.00067 218.244 3.00067 224.832C3.00067 231.42 4.29836 237.944 6.81963 244.031C9.34091 250.117 13.0364 255.648 17.6951 260.306C22.3535 264.965 27.884 268.661 33.9706 271.182C40.0573 273.703 46.581 275.001 53.1692 275.001C59.7574 275.001 66.2811 273.703 72.3677 271.182C78.4544 268.661 83.9848 264.965 88.6433 260.306L173.968 174.969M103.032 104.032L189.775 18.0202C194.433 13.3615 199.964 9.66604 206.05 7.14477C212.137 4.6235 218.661 3.32581 225.249 3.32581C231.837 3.32581 238.361 4.6235 244.447 7.14477C250.534 9.66604 256.065 13.3615 260.723 18.0202C265.382 22.6786 269.077 28.2091 271.598 34.2958C274.12 40.3824 275.417 46.9061 275.417 53.4943C275.417 60.0825 274.12 66.6062 271.598 72.6929C269.077 78.7795 265.382 84.31 260.723 88.9684L173.968 174.969" stroke="#FE46CA" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
 
@@ -46,6 +46,7 @@ export default function test(){
                 </svg>
             </ParallaxLayer>
 
+            {/* the three circles and squares and logo*/}
             <ParallaxLayer speed={1}>
 
                 <svg className={styles.halfCircle} width="234" height="377" viewBox="0 0 234 377" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -79,8 +80,8 @@ export default function test(){
                     <Image
                     src="/assets/Osulogo.png"
                     alt="osu! logo"
-                    width={500}
-                    height={500}
+                    width={2000}
+                    height={2000}
                     />
                 </div>
 
@@ -88,8 +89,8 @@ export default function test(){
                     <Image
                     src="/assets/Osulogo.png"
                     alt="osu! logo"
-                    width={520}
-                    height={520}
+                    width={2000}
+                    height={2000}
                     />
                 </div>
 
@@ -97,12 +98,13 @@ export default function test(){
                     <Image
                     src="/assets/OsulogoWhite.png"
                     alt="osu! logo"
-                    width={750}
-                    height={750}
+                    width={2000}
+                    height={2000}
                     />
                 </div>
             </ParallaxLayer>
 
+            {/* content 1 */}
             <ParallaxLayer offset={0} speed={0.5}>
                 <div className={styles.content}>
                     <small className={styles.small}>Welcome to OSU</small>
@@ -111,7 +113,7 @@ export default function test(){
                 </div>
             </ParallaxLayer>
 
-            <ParallaxLayer offset={0.999} speed={1} className={styles.section1}/>
+            <ParallaxLayer offset={0.999} speed={1} factor={2} className={styles.section1}/>
                 
             <ParallaxLayer offset={0.999} speed={2}>
                 <h1 className={styles.title}>What is osu?</h1>
