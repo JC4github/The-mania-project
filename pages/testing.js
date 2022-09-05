@@ -1,10 +1,18 @@
 import styles from '../styles/Osu.module.css'
 import Image from 'next/image'
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
+import { Paper } from '@mui/material'
+import Head from 'next/head'
+import Script from 'next/script'
 
 export default function test(){
     return (
     <div>
+        <Head>
+            <title>osu!</title>
+        </Head>
+        <script type='text/javascript' src='/static/scroll.js'/>
+
         <Parallax pages={10}>
 
             <ParallaxLayer speed={1} className={styles.hero} />
@@ -73,8 +81,6 @@ export default function test(){
                     <rect x="5" y="5" width="48" height="48" stroke="#540E83" stroke-width="10"/>
                     </svg>
                 </div>
-                
-
 
                 <div className={styles.logo1}>
                     <Image
@@ -113,19 +119,90 @@ export default function test(){
                 </div>
             </ParallaxLayer>
 
-            <ParallaxLayer offset={0.999} speed={1} factor={2} className={styles.section1}/>
+            <ParallaxLayer offset={0.999} speed={1} factor={10} className={styles.section1}/>
                 
-            <ParallaxLayer offset={0.999} speed={2}>
-                <h1 className={styles.title}>What is osu?</h1>
+            <ParallaxLayer offset={0.999} speed={1.3}>
+            <div>
+                <h1 className={styles.title1}>What is osu?</h1>
+            </div>
+                
             </ParallaxLayer>
 
-            <ParallaxLayer offset={0.999} speed={1.5}>
-                <p>
-                    Osu! is a popular rhythm game developed by Dean Herbert
-                </p>
+            <ParallaxLayer offset={0.999} speed={0.7}>
+                <Paper elevation={3} className={styles.paperL} sx={{ borderRadius: 5 }}>
+                <div className={styles.centerY}>
+                    <p className={styles.small}>
+                    Osu! is a popular rhythm game
+                    </p>
+                    <h2 className={styles.title2}>developed by <span className={styles.title3}>Dean Herbert</span> released back in 2007.</h2>
+                </div>
+                </Paper>
+                <Paper elevation={3} className={styles.paperR} sx={{ borderRadius: 5 }}>
+                <div className={styles.centerY}>
+                    <p className={styles.small}>
+                    It has since grown to
+                    </p>
+                    <h2 className={styles.title2}>over <span className={styles.title3}>19 million</span> monthly active players.</h2>
+                </div>
+                </Paper>
             </ParallaxLayer>
 
+            <ParallaxLayer offset={1.3} speed={1.5}>
+            <div>
+                <h1 className={styles.title4}>There are four main game modes</h1>
+            </div>
+                
+            </ParallaxLayer>
+
+            <ParallaxLayer offset={1.99} speed={1}>
+                <div>
+                    <Paper className={styles.paperM} sx={{ borderRadius: 5 }} elevation={5}>
+                        <div className={styles.mode1}>
+                            <Image
+                            src="/assets/osuMode.png"
+                            alt="osu mode"
+                            width="100%"
+                            height="37%"
+                            objectFit='contain'
+                            layout='responsive'
+                            />
+                        </div>
+                        <div className={styles.mode2}>
+                            <Image
+                            src="/assets/taikoMode.png"
+                            alt="osu mode"
+                            width="100%"
+                            height="37%"
+                            objectFit='contain'
+                            layout='responsive'
+                            />
+                        </div>
+                        <div className={styles.mode3}>
+                            <Image
+                            src="/assets/catchMode.png"
+                            alt="osu mode"
+                            width="100%"
+                            height="37%"
+                            objectFit='contain'
+                            layout='responsive'
+                            />
+                        </div>
+                        <div className={styles.mode4}>
+                            <Image
+                            src="/assets/maniaMode.png"
+                            alt="osu mode"
+                            width="100%"
+                            height="37%"
+                            objectFit='contain'
+                            layout='responsive'
+                            />
+                        </div>
+                    </Paper>
+                </div>
+            </ParallaxLayer>
         </Parallax>
+        
+        
     </div>
     )
 }
