@@ -1,19 +1,19 @@
 import styles from '../styles/Osu.module.css'
 import Image from 'next/image'
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
-import { Paper } from '@mui/material'
+import { Paper, Box } from '@mui/material'
 import Head from 'next/head'
-import Script from 'next/script'
+import React from 'react'
 
 export default function test(){
+    
     return (
     <div>
         <Head>
             <title>osu!</title>
         </Head>
-        <script type='text/javascript' src='/static/scroll.js'/>
-
-        <Parallax pages={10}>
+        <div>
+        <Parallax pages={10} style={{ backgroundColor: '#f7f7f7' }}>
 
             <ParallaxLayer speed={1} className={styles.hero} />
 
@@ -113,13 +113,12 @@ export default function test(){
             {/* content 1 */}
             <ParallaxLayer offset={0} speed={0.5}>
                 <div className={styles.content}>
-                    <small className={styles.small}>Welcome to OSU</small>
+                    <small className={styles.small} >Welcome to OSU</small>
                     <h1 className={styles.title}>The Home Of Mania!</h1>
                     <button className={styles.button} type="button">Explore</button> 
                 </div>
             </ParallaxLayer>
 
-            <ParallaxLayer offset={0.999} speed={1} factor={10} className={styles.section1}/>
                 
             <ParallaxLayer offset={0.999} speed={1.3}>
             <div>
@@ -147,18 +146,35 @@ export default function test(){
                 </Paper>
             </ParallaxLayer>
 
-            <ParallaxLayer offset={1.3} speed={1.5}>
+            <ParallaxLayer offset={1.3} speed={0.7}>
             <div>
                 <h1 className={styles.title4}>There are four main game modes</h1>
             </div>
                 
             </ParallaxLayer>
 
-            <ParallaxLayer offset={1.99} speed={1}>
-                <div>
-                    <Paper className={styles.paperM} sx={{ borderRadius: 5 }} elevation={5}>
-                        <div className={styles.mode1}>
-                            <Image
+            <ParallaxLayer  className={styles.title2} sticky={{ start: 1.99, end: 2.5 }}>
+                <div className={styles.content2}>
+                    <h2>
+                        Each game mode has its own <span style={{ color: 'white' }}>unique gameplay</span> mechanics.
+                    </h2>
+                </div>
+            </ParallaxLayer>
+
+            <ParallaxLayer  className={styles.title2} sticky={{ start: 3.5, end: 4 }}>
+                <div className={styles.content2}>
+                    <h2>
+                        But osu!mania is <span style={{ color: 'white' }}>my favorite! </span> 
+                    </h2>
+                    <h2>So lets talk about that.</h2>
+                </div>
+            </ParallaxLayer>
+
+            <ParallaxLayer  className={styles.title2} sticky={{ start: 1.99, end: 4 }}>
+                
+                <div className={styles.modes}>
+                    <div className={styles.mode1}>
+                            <Image style={{ zIndex: 4}}
                             src="/assets/osuMode.png"
                             alt="osu mode"
                             width="100%"
@@ -187,22 +203,60 @@ export default function test(){
                             layout='responsive'
                             />
                         </div>
-                        <div className={styles.mode4}>
-                            <Image
+                        
+                        <div className={styles.mode4}><Image
                             src="/assets/maniaMode.png"
                             alt="osu mode"
                             width="100%"
                             height="37%"
                             objectFit='contain'
                             layout='responsive'
-                            />
-                        </div>
-                    </Paper>
+                            /></div>
                 </div>
             </ParallaxLayer>
+
+            <ParallaxLayer sticky={{ start: 1.99, end: 4 }}>
+                <Paper className={styles.paperM} sx={{ borderRadius: 5 }} elevation={5}>
+                </Paper>
+            </ParallaxLayer>
+
+            <ParallaxLayer offset={4.7} >
+                <Paper className={styles.paperLong} elevation={3} sx={{ borderRadius: 5, backgroundColor: 'white' }}>
+                <div className={styles.centerX}>
+                    <img src="/assets/background.png" alt="bg" className={styles.dockbg}/>
+
+                    <img src="/assets/dock.png" alt="dock" className={styles.dock}/>
+
+                    <div className={`${styles.notes} ${styles.centerX}`}>
+                        <img src="/assets/mania-note@2x.png" alt="blue note" />
+                        <img src="/assets/mania-note-pink@2x.png" alt="blue note" />
+                        <img src="/assets/mania-note-pink@2x.png" alt="blue note" />
+                        <img src="/assets/mania-note@2x.png" alt="blue note" />
+                        <div className={`${styles.light} ${styles.centerX}`}>
+                            <div className={styles.lightContent}>
+                            <img src="/assets/mania-stage-light@2x.png" alt="light" />
+                            <img src="/assets/mania-stage-light@2x.png" alt="light" />
+                            <img src="/assets/mania-stage-light@2x.png" alt="light" />
+                            <img src="/assets/mania-stage-light@2x.png" alt="light" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </Paper>
+                <div className={styles.coreText}>
+                    <h1 className={styles.title4}>Core Gameplay</h1>
+                    
+                </div>
+                <Paper elevation={3} sx={{ borderRadius: 5 }} className={styles.coreContent}>
+                <div className={styles.centerY}>
+                <p className={styles.small}>Follow the beat</p>
+                        <h2 className={styles.title2}>click to the  <span className={styles.title3}>rhythm</span> of your <span className={styles.title3}>favorite song!</span> </h2>
+                        </div>
+                </Paper>
+            </ParallaxLayer>
         </Parallax>
-        
-        
+        </div>
+        {/* <script type='text/javascript' src='/static/scroll.js'/> */}
     </div>
     )
 }
